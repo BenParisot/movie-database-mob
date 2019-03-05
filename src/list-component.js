@@ -3,7 +3,7 @@ export function createLi(movie) {
     const html = `
     <li>
                 <h2>${movie.title}</h2>
-                <img src="${movie.poster_path}">
+                <img src="https://image.tmdb.org/t/p/w154${movie.poster_path}">
                 <p>${movie.release_date}</p>
             </li>`;
     template.innerHTML = html;

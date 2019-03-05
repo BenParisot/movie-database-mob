@@ -14,10 +14,10 @@
     align-items: center;
 }
 
-img {
+/* img {
     width: 80px;
     
-}
+} */
 
 #page-display {
     display: flex;
