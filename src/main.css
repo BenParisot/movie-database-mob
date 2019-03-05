@@ -18,3 +18,11 @@ img {
     width: 80px;
     
 }
+
+#page-display {
+    display: flex;
+}
+
+#page-display button {
+    margin: 5px;
+}
