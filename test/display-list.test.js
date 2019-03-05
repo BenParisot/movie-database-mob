@@ -1,15 +1,6 @@
+import { createLi } from '../src/list-component.js';
 const test = QUnit.test;
-function createLi(movie) {
-    const template = document.createElement('template');
-    const html = `
-    <li>
-                <h2>${movie.title}</h2>
-                <img src="${movie.poster_path}">
-                <p>${movie.release_date}</p>
-            </li>`;
-    template.innerHTML = html;
-    return template.content;
-}
+
 test('create list item template', assert => {
     //arrange
     const movie = {
