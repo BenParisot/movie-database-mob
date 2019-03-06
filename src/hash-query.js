@@ -10,7 +10,8 @@ export function readFromQuery(existingQuery) {
     const page = parseInt(searchParams.get('page'));
     return {
         searchTerm: searchTerm,
-        page: page
+        page: page,
+        totalPages: 0
     };
 }
 

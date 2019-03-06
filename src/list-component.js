@@ -12,6 +12,9 @@ export function createLi(movie) {
 
 export default function loadList(movies) {
     const movieListNode = document.getElementById('movie-list');
+    while(movieListNode.children.length > 0) {
+        movieListNode.firstElementChild.remove();
+    }
     movies.forEach(movie => {
         const movieLI = createLi(movie);
         movieListNode.appendChild(movieLI);

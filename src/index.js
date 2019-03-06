@@ -3,6 +3,7 @@ import './pagination-component.js';
 import { updateSearchField } from './search-component.js';
 import { readFromQuery } from './hash-query.js';
 import { makeSearchMovieURL } from './make-movie-search-url-component.js';
+import updatePaging from './pagination-component.js';
 
 window.addEventListener('hashchange', () => {
     const query = window.location.hash.slice(1);
@@ -16,6 +17,9 @@ window.addEventListener('hashchange', () => {
         .then(response => response.json())
         .then(response => {
             loadList(response.results);
+            queryOptions.totalPages = response.total_pages;
+            console.log(queryOptions);
+            updatePaging(queryOptions);
         });
 });
 
