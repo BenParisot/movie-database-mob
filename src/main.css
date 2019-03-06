@@ -14,10 +14,10 @@
     align-items: center;
 }
 
-/* img {
-    width: 80px;
+img {
+    width: 152px;
     
-} */
+}
 
 #page-display {
     display: flex;

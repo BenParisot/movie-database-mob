@@ -17,9 +17,11 @@ window.addEventListener('hashchange', () => {
         .then(response => response.json())
         .then(response => {
             loadList(response.results);
-            queryOptions.totalPages = response.total_pages;
-            console.log(queryOptions);
-            updatePaging(queryOptions);
+            const pagingOptions = {
+                page: response.page,
+                totalPages: response.total_pages
+            };
+            updatePaging(pagingOptions);
         });
 });
 
